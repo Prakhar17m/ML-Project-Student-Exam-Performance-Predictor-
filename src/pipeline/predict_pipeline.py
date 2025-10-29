@@ -1,3 +1,4 @@
+import os
 import sys
 import pandas as pd
 from src.exception import CustomException
@@ -8,20 +9,30 @@ class PredictPipeline:
     def __init__(self):
         pass
 
-    def predict(self,features):
+    def predict(self, features):
         try:
-            model_path=os.path.join("artifacts","model.pkl")
-            preprocessor_path=os.path.join('artifacts','preprocessor.pkl')
+            # Get project root path
+            project_root = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
+            model_path = os.path.join(project_root, "artifacts", "model.pkl")
+            preprocessor_path = os.path.join(project_root, "artifacts", "preprocessor.pkl")
             print("Before Loading")
-            model=load_object(file_path=model_path)
-            preprocessor=load_object(file_path=preprocessor_path)
+            # File existence checks
+            if not os.path.exists(preprocessor_path):
+                raise FileNotFoundError(f"Preprocessor not found at: {preprocessor_path}")
+            if not os.path.exists(model_path):
+                raise FileNotFoundError(f"Model not found at: {model_path}")
+            # Load preprocessor and model
+            preprocessor = load_object(preprocessor_path)
+            model = load_object(model_path)
             print("After Loading")
-            data_scaled=preprocessor.transform(features)
-            preds=model.predict(data_scaled)
+            # Transform input and predict
+            data_scaled = preprocessor.transform(features)
+            preds = model.predict(data_scaled)
+            print("Prediction Done")
             return preds
-        
-        except Exception as e:
-            raise CustomException(e,sys)
+        except Exception as e:  
+            raise CustomException(e, sys)
+
 
 
 
