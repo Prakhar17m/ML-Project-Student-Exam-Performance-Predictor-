@@ -7,4 +7,6 @@ catboost
 xgboost
 Flask
 dill
+catboost==1.2.2
+
 -e .
