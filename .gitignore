@@ -1,0 +1,87 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+*.so
+
+# Byte-compiled / optimized / DLL files
+*.egg-info/
+.eggs/
+*.egg
+
+# Distribution / packaging
+build/
+dist/
+wheels/
+pip-wheel-metadata/
+*.spec
+
+# Virtual Environments
+venv/
+.env/
+.env.bak/
+.venv/
+*/venv/
+*/.venv/
+
+# Conda Env Folder
+condaenv/
+*/condaenv/
+*.conda
+# If your env is inside project (replace "venu" with your env name):
+venu/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+jupyter_cache/
+*.ipynb_checkpoints
+
+# Logs & Debugging
+*.log
+logs/
+debug.log
+
+# IDE / Editor settings
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Environment and Credentials Files
+*.env
+*.json
+*.yaml
+config.yaml
+secrets.json
+
+# ---- ML / DL Project Specific ----
+# Model Outputs
+models/
+model/
+saved_models/
+checkpoints/
+outputs/
+results/
+
+# Data
+data/
+datasets/
+*.csv
+*.pkl
+*.h5
+*.npz
+*.npy
+
+# Experiments
+runs/
+mlruns/
+
+# Cache
+.cache/
+cache/

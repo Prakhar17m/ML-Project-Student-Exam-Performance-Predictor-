@@ -1,0 +1,13 @@
+COMMANDS>>>>>>>>>>>>
+conda create -p venu python==3.8 -y ---------->this command is used for creating virtual environment.
+conda activate venv/-------------------------->used to activate the venv 
+pip install -r requirements.txt
+-e .------------>it maps the setup.py file when we run the requirements.py
+
+
+
+
+sys library----->py provides various functions and variables that  are used to manipulate different parts of the py runtime environment.
+logger file----->To create and manage log files in Python, use the built-in logging module, which allows you to capture and record valuable information during your program's execution.
+
+setup.py file is made to convert the folders having the __init__.py file into the packages. 
