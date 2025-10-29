@@ -9,5 +9,5 @@ pip install -r requirements.txt
 np.c_ ---------->is an indexing object that allows you to combine/stack arrays horizontally (column-wise).
 sys library----->py provides various functions and variables that  are used to manipulate different parts of the py runtime environment.
 logger file----->To create and manage log files in Python, use the built-in logging module, which allows you to capture and record valuable information during your program's execution.
-
+dill------------>library help to use the pickel file
 setup.py file is made to convert the folders having the __init__.py file into the packages. 
